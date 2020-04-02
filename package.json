@@ -1,0 +1,29 @@
+{
+  "name": "pc-nuxt",
+  "version": "1.0.0",
+  "description": "pc-re",
+  "author": "luozhi",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env DevelopEnv=dev nuxt",
+    "dev:test": "cross-env DevelopEnv=test nuxt",
+    "build": "cross-env DevelopEnv=managepro nuxt build",
+    "start": "cross-env nuxt start",
+    "generate:dev": "cross-env DevelopEnv=dev nuxt generate",
+    "generate": "cross-env DevelopEnv=managepro nuxt generate",
+    "generate:test": "cross-env DevelopEnv=test nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.5",
+    "cross-env": "^5.2.0",
+    "echarts": "^4.7.0",
+    "element-ui": "^2.13.0",
+    "jquery": "^3.4.1",
+    "js-md5": "^0.7.3",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0"
+  }
+}

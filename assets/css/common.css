@@ -1,0 +1,133 @@
+/* 整体样式 luozhi 2020-03-25 */
+
+/* flex对齐方式 */
+.flex-middle {
+    display: flex;
+    align-items: center;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+/* 表格筛选框前文字格式 */
+.select-label {
+    font-size: 16px;
+}
+/* 菜单栏 */
+.menu-box {
+    float: left;
+    width: 230px;
+    height: 100vh;
+    background: #16253f;
+    overflow: auto;
+  }
+  /* 主页栏 */
+  .main-box {
+    width: calc(100% - 230px);
+    float: left;
+  }
+  /* 标题栏 */
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    background: yellow;
+  }
+  /* 主体内容 */
+  .content-box {
+    height: calc(100vh - 55px);
+    padding: 0 20px;
+    background: #e8eaf1;
+  }
+  .__nuxt-error-page.content-box {
+      position: relative;
+  }
+/* 导航栏样式 */
+.main-nav {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    font-size: 16px;
+    color: #717171;
+}
+/* 筛选栏底框 */
+.main-select {
+    height: 68px;
+    background: #fff;
+    padding: 0 30px;
+}
+/* 分页器 */
+.main-paginate {
+    float: right;
+    margin-top: 20px;
+    margin-right: 14px;
+}
+/* 普通表格容器 */
+.table-content-normal {
+    width: 100%;
+    height: calc(100% - 142px);
+    background: #fff;
+}
+/* tabs表格容器 */
+.table-content-tabs {
+    width: 100%;
+    height: calc(100% - 192px);
+    background: #fff;
+}
+/* tabs栏 */
+.table-tabs .el-tabs__item {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 24px;
+    font-size: 18px;
+}
+/* 表格高度 */
+.main-table {
+    height: calc(100% - 65px);
+}
+/* 取消table下划线 */
+.main-table::before {
+    height: 0;
+}
+/* 表格标题栏 */
+.main-table th {
+    background:rgba(238,245,252,1);
+    font-size: 18px;
+    color: #162C4A;
+    padding: 0;
+    font-weight: 400;
+    height: 48px;
+    line-height: 48px;
+}
+.main-table th.is-leaf {
+    border-bottom: 1px solid #B2D2F2;
+    box-shadow:0px 1px 0px 0px rgba(220,224,226,0.5);
+}
+/* 表格内容栏 */
+.main-table td {
+    font-size:16px;
+    padding: 0;
+    font-weight:400;
+    color: #484849;
+    height: 48px;
+    line-height:48px;
+}
+/* 表格操作样式 */
+.main-table td .el-button--text {
+    font-size:16px;
+}
+/* dialog */
+.max-dialog .el-dialog {
+    width: 1100px;
+}
+.medium-dialog .el-dialog {
+    width: 620px;
+}
+.min-dialog .el-dialog {
+    width: 420px;
+}
