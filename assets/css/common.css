@@ -1,4 +1,112 @@
 /* 整体样式 luozhi 2020-03-25 */
+/* 滚动条样式 */
+.scroll-min::-webkit-scrollbar{
+	width:6px;
+}
+.scroll-min::-webkit-scrollbar-track{
+	box-shadow:inset 0 0 6px rgba(0,0,0,.5);
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.scroll-min::-webkit-scrollbar-thumb{
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	background:transparent;
+	/*-webkit-box-shadow:inset 0 0 3px rgba(15, 133, 232,.5);*/
+}
+.scroll-min::-webkit-scrollbar-thumb:window-inactive{
+	background:transparent;
+}
+
+
+.scroll-height::-webkit-scrollbar{
+	height:6px;
+}
+.scroll-height::-webkit-scrollbar-track{
+	box-shadow:inset 0 0 6px rgba(249, 249, 249,.5);
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.scroll-height::-webkit-scrollbar-thumb{
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	background:rgba(0,0,0,.5);
+	box-shadow:inset 0 0 3px rgba(0,0,0,.5);
+}
+.scroll-height::-webkit-scrollbar-thumb:window-inactive{
+	background:rgba(0,0,0,.5)
+}
+
+
+.scroll-normal::-webkit-scrollbar{
+	width:6px;
+}
+.scroll-normal::-webkit-scrollbar-track{
+	box-shadow:inset 0 0 6px rgba(249, 249, 249,.5);
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+.scroll-normal::-webkit-scrollbar-thumb{
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	background:rgba(4,4,4,.2);
+	box-shadow:inset 0 0 3px rgba(0,0,0,.5);
+}
+.scroll-normal::-webkit-scrollbar-thumb:window-inactive{
+	background:rgba(4,4,4,.2)
+}
+
+/* 按钮样式 */
+.el-button:focus, .el-button:hover,.el-button.is-active, .el-button:active{
+    background: rgba(80,133,255,1);
+    border: none;
+    color: #fff;
+}
+.el-button{
+    padding: 0px 0px;
+    font-weight: 400;
+}
+/* <el-button size="medium">确定</el-button> */
+.el-button--medium{
+    font-size:16px;
+    border-radius:2px;
+    border: none;
+    width: 87px;
+    height: 35px;
+    background: rgba(80,133,255,1);
+}
+/* 取消按钮样式 */
+/* <el-button size="medium" class="cancel">取消</el-button> */
+.cancel.el-button--medium{
+    background:rgba(236,236,236,1);
+    color: #333333;
+}
+/* 弹窗内按钮样式 */
+/* <el-button type="primary">确定</el-button> */
+.el-button--primary{
+    width: 139px;
+    height: 45px;
+    background: rgba(80,133,255,1);
+    font-size: 18px;
+}
+
+/* 光标样式 */
+.cur-pointer {
+    cursor: pointer;
+}
+.cur-default {
+    cursor: default;
+}
+.cur-wait {
+    cursor: wait;
+}
+/* 点击适应 */
+.click-stop {
+    pointer-events: none;
+}
+.click-auto {
+    pointer-events: auto;
+}
 
 /* flex对齐方式 */
 .flex-middle {
@@ -12,6 +120,10 @@
 .flex-center {
     display: flex;
     justify-content: center;
+}
+/* 页面不可滚动 */
+.flow-hide {
+    overflow: hidden;
 }
 /* 表格筛选框前文字格式 */
 .select-label {
@@ -40,9 +152,12 @@
   }
   /* 主体内容 */
   .content-box {
-    height: calc(100vh - 55px);
     padding: 0 20px;
     background: #e8eaf1;
+    height: calc(100vh - 55px);
+  }
+  .group-box {
+    height: calc(100vh - 55px);
   }
   .__nuxt-error-page.content-box {
       position: relative;
@@ -130,4 +245,33 @@
 }
 .min-dialog .el-dialog {
     width: 420px;
+}
+/* 1680px分辨率适配 */
+@media screen and (max-width:1919px) and (min-width:1680px){
+    /* 按钮 */
+    .el-button--medium{
+        font-size: 14px;
+        width: 76px;
+        height: 31px;
+    }
+    .el-button--primary{
+        width: 122px;
+        height: 39px;
+        font-size: 16px;
+    }
+}
+/* 1440px及1440px以下分辨率适配*/
+@media screen and (max-width:1679px){
+    /* 按钮 */
+    .el-button--medium{
+        font-size: 12px;
+        width: 65px;
+        height: 26px;
+    }
+    .el-button--primary{
+        width: 103px;
+        height: 34px;
+        font-size: 14px;
+    }
+
 }

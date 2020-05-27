@@ -43,7 +43,6 @@ export default function ({ $axios }) {
         time
     }) => {
         let _url = ApiConfig.service[serviceName] + apiUrl;
-        console.log('url:' + _url);
         $axios.defaults.baseURL = (process.env.NODE_ENV === 'development') ? '/enterprise' : ApiConfig.apiHost;
         return $axios({
             method: 'post',

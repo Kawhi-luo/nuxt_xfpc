@@ -8,6 +8,7 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations, mapActions, mapGetters } from "vuex";
 import VHeader from "~/components/header/mainHeader.vue";
 import VMenu from "~/components/menu/index.vue";
 export default {
@@ -15,8 +16,6 @@ export default {
     VHeader,
     VMenu
   },
-  methods: {
-  }
 };
 </script>
 <style>

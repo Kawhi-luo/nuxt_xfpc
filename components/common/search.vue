@@ -13,7 +13,9 @@
 </template>
 <script>
 export default {
-  props: ["propHolder"],
+  props: {
+    propHolder: String
+  },
   data() {
     return {
       searchContent: ""

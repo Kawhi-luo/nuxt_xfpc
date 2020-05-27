@@ -12,11 +12,14 @@
     </header>
 </template>
 <script>
+import cookie from "js-cookie";
 export default {
     methods: {
         exit() {
-            alert('22');
-            console.log(1);
+            cookie.remove('token')
+            this.$router.push({
+              name: "login"
+            });
         }
     },
 }

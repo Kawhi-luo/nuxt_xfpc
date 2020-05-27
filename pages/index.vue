@@ -6,12 +6,10 @@
 </template>
 <script>
 export default {
+  middleware: 'authCheck',
   data() {
     return {};
   },
-  mounted() {
-    // this.$bus.$emit('jumpHome')
-  }
 };
 </script>
 <style lang="less" scoped>

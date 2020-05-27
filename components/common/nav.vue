@@ -7,6 +7,8 @@
 </template>
 <script>
 export default {
-  props: ["propTitle"]
+  props: {
+    propTitle: Array
+  }
 };
 </script>

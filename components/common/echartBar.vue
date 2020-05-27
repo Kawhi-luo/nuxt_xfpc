@@ -6,7 +6,12 @@
 </template>
 <script>
 export default {
-  props: ["propId", "xData", "yData", "tip"],
+  props: {
+    propId: String,
+    xData: Array,
+    yData: Array,
+    tip: String
+  },
   mounted() {
     this.$nextTick(function() {
       let myChart = this.$echarts.init(document.getElementById(this.propId));

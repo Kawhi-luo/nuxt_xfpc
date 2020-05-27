@@ -37,12 +37,7 @@ export default {
     });
   },
   mounted() {
-    this.$ls.set("user", {
-      name: "luo",
-      id: "111",
-      age: 13
-    });
-    console.log(this.$ls.get("user"));
+  
   },
   methods: {
     jumpTo(toggle, url) {

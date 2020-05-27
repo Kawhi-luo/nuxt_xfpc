@@ -2,7 +2,7 @@
 常规首页 luozhi 2020-03-24
 -->
 <template>
-  <div class="home-content">
+  <div class="home-content flow-hide">
     <div class="left-home">
       <div class="home-total-mess"></div>
       <div class="home-map-box">
@@ -10,16 +10,16 @@
       </div>
     </div>
     <div class="right-home">
-      <bar-chart :tip="tip" :xData="xData" :yData="yData" propId="Line" class="line" />
+      <custom-chart :tip="tip" :xData="xData" :yData="yData" type="bar" custom="normal" propId="Line" class="echart-box" />
     </div>
   </div>
 </template>
 <script>
-import BarChart from "~/components/common/echartPie.vue";
+import CustomChart from "~/components/common/echartCommon.vue";
 import VMap from "~/components/home/map";
 export default {
   components: {
-    BarChart,
+    CustomChart,
     VMap
   },
   data() {
@@ -33,7 +33,8 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.line {
+.echart-box {
+  display: inline-block;
   width: 200px;
   height: 200px;
 }

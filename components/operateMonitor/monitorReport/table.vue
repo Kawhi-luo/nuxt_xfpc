@@ -267,7 +267,10 @@
 </template>
 <script>
 export default {
-    props: ["tableData","tableType"],
+    props: {
+      tableData: Array,
+      tableType: String
+    },
   data() {
     return {};
   },

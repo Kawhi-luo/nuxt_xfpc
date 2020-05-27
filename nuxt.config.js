@@ -13,7 +13,7 @@ export default {
       { hid: 'description', name: 'description', content: 'pc-nuxt-re-des' }
     ],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
       {
         src: "/gis/ol/ol.js",
       },
@@ -59,7 +59,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui', '@/plugins/http', '@plugins/echarts', '@plugins/storage', '@plugins/bus'
+    '@/plugins/element-ui', '@/plugins/http', '@plugins/echarts', '@plugins/bus', '@plugins/storage'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -70,8 +70,11 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios', '@nuxtjs/proxy'
+    '@nuxtjs/axios', '@nuxtjs/proxy', // '@nuxtjs/universal-storage',
   ],
+  // storage: {
+  //   localStorage: true
+  // },
   axios: {
     proxy: true,
     prefix: '/enterprise',
@@ -88,7 +91,7 @@ export default {
     }
   },
   router: {
-    middleware: 'authCheck'
+    // middleware: 'authCheck'
   },
   /*
   ** Build configuration

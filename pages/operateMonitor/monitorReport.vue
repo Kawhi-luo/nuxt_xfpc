@@ -62,7 +62,7 @@
   </div>
 </template>
 <script>
-import deviceJSON from "~/assets/json/device.json";
+import deviceJSON from "~/assets/json/monitorReport/device.json";
 import VNav from "~/components/common/nav.vue";
 import search from "~/components/common/search.vue";
 import VTable from "~/components/operateMonitor/monitorReport/table.vue";
